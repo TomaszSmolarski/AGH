@@ -1,4 +1,6 @@
 # Tic Tac Toe
+*Written on 6 June 2019.*
+
 LAN game written in Python using pygame, sys and os libraries.
 
 To start the game you have to run client.py as first player to establish a server and
