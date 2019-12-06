@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="725.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Canvas fx:id="canvas" height="600.0" layoutX="14.0" layoutY="22.0" width="600.0" />
+      <Button layoutX="634.0" layoutY="413.0" mnemonicParsing="false" onAction="#startButtonClicked" prefHeight="31.0" prefWidth="103.0" text="START" />
+      <Button layoutX="634.0" layoutY="464.0" mnemonicParsing="false" onAction="#stopButtonClicked" prefHeight="31.0" prefWidth="103.0" text="STOP" />
+      <ProgressBar fx:id="progressBar" layoutX="16.0" layoutY="649.0" prefHeight="23.0" prefWidth="596.0" progress="0.0" />
+      <TextField fx:id="textField" layoutX="634.0" layoutY="363.0" prefHeight="31.0" prefWidth="103.0" />
+      <Text layoutX="634.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ile punktów:" wrappingWidth="103.00000011920929" />
+      <Text fx:id="text" layoutX="634.0" layoutY="544.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wynik:" wrappingWidth="103.00000011920929" />
+   </children>
+</Pane>

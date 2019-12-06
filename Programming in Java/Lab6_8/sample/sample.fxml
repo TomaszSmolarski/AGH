@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#menuSave" text="Save" />
+                  <MenuItem mnemonicParsing="false" onAction="#menuOpen" text="Open" />
+                  <MenuItem mnemonicParsing="false" onAction="#menuImport" text="Import" />
+                  <MenuItem mnemonicParsing="false" onAction="#menuExport" text="Export" />
+              <MenuItem mnemonicParsing="false" onAction="#menuClose" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#menuAbout" text="About" />
+               </items></Menu>
+        </menus>
+      </MenuBar>
+      <Pane layoutX="10.0" layoutY="42.0" prefHeight="369.0" prefWidth="773.0">
+         <children>
+            <ListView fx:id="inProgressList" layoutX="225.0" layoutY="45.0" onMouseClicked="#ListSelected" prefHeight="270.0" prefWidth="150.0">
+               <tooltip>
+                  <Tooltip fx:id="tooltip" text="Empty Tooltip" />
+               </tooltip></ListView>
+            <ListView fx:id="doneList" layoutX="420.0" layoutY="45.0" onMouseClicked="#ListSelected" prefHeight="270.0" prefWidth="150.0">
+               <tooltip>
+                  <Tooltip text="Empty Tooltip" />
+               </tooltip></ListView>
+            <ListView fx:id="toDoList" layoutX="33.0" layoutY="45.0" onMouseClicked="#ListSelected" prefHeight="270.0" prefWidth="150.0">
+               <tooltip>
+                  <Tooltip text="Empty Tooltip" />
+               </tooltip></ListView>
+            <Label layoutX="33.0" layoutY="19.0" prefHeight="21.0" prefWidth="150.0" text="TO DO" />
+            <Label layoutX="420.0" layoutY="19.0" prefHeight="21.0" prefWidth="150.0" text="DONE" />
+            <Label layoutX="225.0" layoutY="19.0" prefHeight="21.0" prefWidth="150.0" text="IN PROGRESS" />
+            <Button layoutX="146.0" layoutY="315.0" mnemonicParsing="false" onAction="#fromToDoToInProgressListButtonClicked" text="-&gt;" />
+            <Button layoutX="225.0" layoutY="315.0" mnemonicParsing="false" onAction="#fromInProgressToToDoListButtonClicked" text="&lt;-" />
+            <Button layoutX="338.0" layoutY="315.0" mnemonicParsing="false" onAction="#fromInProgressToDoneListButtonClicked" text="-&gt;" />
+            <Button layoutX="420.0" layoutY="315.0" mnemonicParsing="false" onAction="#fromDoneToInProgressListButtonClicked" text="&lt;-" />
+            <Button layoutX="230.0" layoutY="354.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="31.0" prefWidth="140.0" text="Add new task" />
+         </children>
+      </Pane>
+   </children>
+</VBox>
