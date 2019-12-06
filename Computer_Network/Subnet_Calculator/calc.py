@@ -252,11 +252,13 @@ def main():
         plik.write(output)
         plik.close()
         if len(sys.argv) > 1:
-            response = os.system("ping  " + ip[:ip.find('/')])
-            if response == 0:
-                print(ip[:ip.find('/')] + " is up!")
-            else:
-                print(ip[:ip.find('/')] + " is down!")
+            print("If you want to ping this address print y")
+            if input()=="y":
+                response = os.system("ping  " + ip[:ip.find('/')])
+                if response == 0:
+                    print(ip[:ip.find('/')] + " is up!")
+                else:
+                    print(ip[:ip.find('/')] + " is down!")
 
 
 if __name__ == "__main__":
